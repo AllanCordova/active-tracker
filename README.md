@@ -6,7 +6,7 @@ https://utfpr-gp.github.io/roubank-css/
 
 ## Protótipo
 
-https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80
+https://www.figma.com/design/eQs9U6fxRRx4kxqXXgyFep/Untitled?node-id=0-1&t=vSiEGcHS1rYITYg5-1
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
