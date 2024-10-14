@@ -5,7 +5,7 @@ Projeto com objetivo de implementar registro de atividades físicas, e consultas
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## Design das Telas - Figma: 
-https://www.figma.com/proto/eQs9U6fxRRx4kxqXXgyFep/Untitled?node-id=0-1&t=lG8WHBw8k6xZ7uCP-1
+https://www.figma.com/design/eQs9U6fxRRx4kxqXXgyFep/active-tracker?node-id=0-1&node-type=canvas&t=uoUyR8Gf8WGIYUp8-0
 
 ## Design System: 
 Link para o PDF
