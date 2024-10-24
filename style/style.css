@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* fontes */
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* tipografia logo 
+color: #06E;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.64px;
+*/
+
+/* tipografia descrições
+color: rgba(0, 0, 0, 0.87);
+font-family: Inter;
+font-size: 60px;
+font-style: normal;
+font-weight: 900;
+line-height: 62.4px; /* 104% */
+
+/* tipografia para sub descrições
+color: rgba(0, 0, 0, 0.87);
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+
+/* tipografia para sub textos
+color: rgba(0, 0, 0, 0.87);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150%
+*/
+
+h2 {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 62.4px; /* 104% */
+}
+
+h3 {
+    color: #06E;
+    font-family: Bold;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.64px;
+}
+
+
+h4 {
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+footer {
+    height: 15vh;
+    background: #F6F6F8;
+    padding: 20px;
+}
