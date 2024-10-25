@@ -67,8 +67,18 @@ h3 {
 }
 
 
+.h3 {
+    color: #2ecc71;
+    font-family: Bold;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.64px;
+}
+
 h4 {
-    color: rgba(0, 0, 0, 0.87);
+    color: #808080;
     text-align: center;
     font-family: Bold;
     font-size: 1.5rem;
@@ -111,3 +121,16 @@ footer {
     text-decoration: underline;
 }
 
+.form-check-input:checked {
+    background-color: #28a745; /* Cor verde */
+    border-color: #28a745; /* Cor verde para a borda */
+  }
+
+  .form-check-input:checked:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* Efeito de foco verde */
+  }
+
+  .form-check-input {
+    width: 1.5rem; /* Ajuste a largura do checkbox */
+    height: 1.5rem; /* Ajuste a altura do checkbox */
+  }
