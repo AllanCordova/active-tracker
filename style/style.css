@@ -57,7 +57,7 @@ h2 {
 }
 
 h3 {
-    color: #06E;
+    color: #2ecc71;
     font-family: Bold;
     font-size: 32px;
     font-style: normal;
@@ -85,9 +85,29 @@ p {
     line-height: 24px;
 }
 
-
 footer {
     height: 15vh;
     background: #F6F6F8;
-    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.container-footer {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #2ecc71;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
