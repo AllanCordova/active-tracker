@@ -1,0 +1,29 @@
+.logo {
+    color: #2ECC71;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.64px;
+}
+
+.titulo {
+    color: black;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 900;
+}
+
+.sub-titulo {
+    color: black;
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 900;
+}
+
+.descricao {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-family: "Noto Sans", sans-serif;
+}

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",          // Gera módulos ES6+ (import/export).
+      "target": "ES6",             // Define o nível de compatibilidade do JavaScript gerado.
+      "moduleResolution": "Node",  // Resolve módulos no estilo Node.js.
+      "outDir": "./dist",          // Diretório de saída para os arquivos compilados.
+      "rootDir": "./src",          // Diretório raiz dos arquivos TypeScript.
+      "strict": true,              // Ativa verificações rigorosas de tipo.
+      "esModuleInterop": true,     // Permite importações padrão de módulos CommonJS.
+      "forceConsistentCasingInFileNames": true, // Impede problemas com nomes de arquivo sensíveis a maiúsculas/minúsculas.
+      "skipLibCheck": true,        // Ignora verificações de tipo para arquivos de declaração.
+      "resolveJsonModule": true    // Permite importar arquivos .json como módulos.
+    },
+    "include": ["src"],            // Arquivos a serem incluídos na compilação.
+    "exclude": ["node_modules"]    // Arquivos ou diretórios a serem excluídos.
+  }
+  
