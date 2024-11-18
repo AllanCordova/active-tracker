@@ -11,7 +11,7 @@ https://www.figma.com/design/eQs9U6fxRRx4kxqXXgyFep/active-tracker?node-id=0-1&n
 https://www.figma.com/proto/eQs9U6fxRRx4kxqXXgyFep/active-tracker?node-id=26-233&node-type=canvas&t=XLdJ7MB8HfHw1QFH-1&scaling=min-zoom&content-scaling=fixed&page-id=11%3A2
 
 ## Site em Produção - GitHub Pages
-https://allancordova.github.io/active-tracker/telas/home.html
+https://allancordova.github.io/active-tracker/prod/telas/index.html
 
 ## Framework CSS
 **BootstrapCSS**
