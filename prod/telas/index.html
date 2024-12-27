@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- links do bootstrap -->
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff">
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2">
+  <!-- link para arquivo style.css -->
+  <link rel="stylesheet" href="../assets/resources/style/style.css">
+  <!-- fontes para o projeto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Active tracker</title>
+</head>
+<body>
+  <header>
+    <!-- Menu para celular -->
+    <nav class="d-lg-none d-md-flex navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Centraliza o título verticalmente -->
+        <div class="nav-title">
+          <h1 class="poppins-bold mb-0">Active Tracker</h1>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Menu para desktop -->
+    <nav class="d-none d-lg-flex p-2 justify-content-around align-items-center bg-light">
+      <div class="nav-title">
+        <h2 class="poppins-bold mb-0">Active Tracker</h2>
+      </div>
+      <div class="nav-icon">
+        <a href="#"><i class="bi bi-person-fill fs-2"></i></a>
+      </div>
+    </nav>
+
+  </header>
+  <section class="container text-center">
+    <!-- versão mobile -->
+    <div class="d-lg-none d-md-flex row p-5">
+      <div class="col-12 p-3">
+        <h2 class="poppins-semibold">Welcome to Active Tracker</h2>
+      </div>
+      <div class="col-12 p-3">
+        <div class="imagens">
+          <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735262728/md-home_lbvpkx.jpg" class="img-fluid shadow">
+        </div>
+      </div>
+    </div>
+    <!-- versão desktop -->
+    <div class="d-none d-lg-flex row align-items-center p-5">
+      <div class="col-12 p-3">
+        <h2 class="poppins-semibold">Welcome to Active Tracker</h2>
+      </div>
+      <div class="col-7">
+        <span class="poppins-light">
+          Active Tracker is a powerful tool designed to help you track your fitness progress and create personalized workout routines. Whether you're looking to improve strength, endurance, or overall fitness, our system allows you to record your training sessions, monitor progress over time, and customize workouts to meet your goals. Stay motivated and organized as you work towards your fitness journey with Active Tracker!
+        </span>
+      </div>
+      <div class="col-5">
+        <div class="p-5">
+          <div class="imagens">
+            <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1734135471/welcome_cahrua.jpg" class="img-fluid shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

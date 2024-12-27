@@ -1,0 +1,161 @@
+/* variaveis */
+
+:root {
+    --bs-success: #2ECC71;
+    --bs-secondary: #198754; /* Nova cor para o tema secundário */
+    --smal: 1rem;
+    --med: 1.4rem;
+    --large: 2rem;
+    --xx-large: 3rem;
+}
+
+
+/* fontes */
+
+.poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: var(--med);
+}
+
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--med);
+}
+
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: var(--smal);
+}
+
+/* classes bootstrap */
+
+.nav-title h1, .nav-title h2 {
+    color: var(--bs-success);
+}
+
+.bi-person-fill {
+    color: var(--bs-secondary)
+}
+
+/* minhas classes */
+
+.imagens img {
+    border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+
+    .imagens img {
+        width: 20rem;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-bold {
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-light {
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-size: var(--smal);
+    }
+}
+
+/* tablets */
+
+@media (min-width: 768px) {
+
+    .imagens img {
+        width: 25rem;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-bold {
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-light {
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-size: var(--smal);
+    }
+}
+
+/* desktop */
+
+@media (min-width: 1024px) {
+
+    .imagens img {
+        width: 20rem;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-bold {
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-light {
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-size: var(--smal);
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .imagens img {
+        width: 20rem;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: var(--large);
+    }
+    
+    .poppins-bold {
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
+    .poppins-light {
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-size: var(--smal);
+    }
+}
