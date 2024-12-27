@@ -38,17 +38,44 @@
     color: var(--bs-success);
 }
 
+.btn-success {
+    border: none;
+    background-color: #2ECC71;
+}
+
 .bi-person-fill {
     color: var(--bs-secondary)
 }
 
+.card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+}
+
 /* minhas classes */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .imagens img {
     border-radius: 10px;
 }
 
+.section-msg  {
+    border: solid rgb(173, 163, 163) 1.5px;
+    border-radius: 5px;
+}
+
+/* mobile */
+
 @media (max-width: 767px) {
+
+    .card-img-top {
+        max-height: 180px;
+    }
 
     .imagens img {
         width: 20rem;
@@ -112,6 +139,12 @@
         width: 20rem;
     }
 
+    .poppins-medium {
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
     .poppins-semibold {
         font-family: "Poppins", serif;
         font-weight: 600;
@@ -139,6 +172,13 @@
         width: 20rem;
     }
 
+    .poppins-medium {
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: var(--med);
+    }
+    
     .poppins-semibold {
         font-family: "Poppins", serif;
         font-weight: 600;
