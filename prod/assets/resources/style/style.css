@@ -78,6 +78,11 @@
     color: var(--bs-success);
 }
 
+.modal-login {
+    border: none;
+    background-color: rgb(252, 249, 246);
+}
+
 /* mobile */
 
 @media (max-width: 767px) {

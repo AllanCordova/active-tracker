@@ -31,13 +31,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Login</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -54,9 +54,42 @@
         <h2 class="poppins-bold mb-0">Active Tracker</h2>
       </div>
       <div class="nav-icon">
-        <a href="#"><i class="bi bi-person-fill fs-3"></i></a>
+        <button class="modal-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="bi bi-person-fill fs-3"></i>
+        </button>
       </div>
     </nav>
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-center fs-5 poppins-semibold" id="exampleModalLabel">Login</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm" class="d-flex flex-column justify-content-center align-items-start w-100" onsubmit="login(event)">
+              <label class="poppins-light" for="email">Email</label>
+              <div class="input-box w-100 p-2">
+                <input class="form-control" type="email" placeholder="name@example.com" id="email" required>
+              </div>
+              <label class="poppins-light" for="password">Senha</label>
+              <div class="input-box w-100 p-2">
+                <input class="form-control" type="password" placeholder="password" id="password" required>
+              </div>
+              <div class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-success text-center w-75">Fazer login</button>
+              </div>
+            </form>            
+          </div>
+          <div class="modal-footer d-flex justify-content-center align-items-center">
+            <div id="loginMessage" class="text-danger mt-2" style="display: none;">Erro ao fazer login. Tente novamente.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </header>
   <section class="container text-center">
     <!-- versão mobile -->
@@ -74,7 +107,7 @@
           Track your progress and create personalized workouts effortlessly. Stay organized and achieve your fitness goals with Active Tracker!
         </span>
         <div class="p-3">
-          <button type="button" class="btn btn-success w-100">Login</button>
+          <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
         </div>
       </div>
     </div>
@@ -91,7 +124,7 @@
             </span>
           </div>
           <div class="p-3">
-            <button type="button" class="btn btn-success w-100">Login</button>
+            <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>    
           </div>
         </div>
       </div>
@@ -106,8 +139,8 @@
   </section>
   <main class="container text-center">
     <div class="row">
-      <div class="col-12 p-2">
-        <h2 class="poppins-semibold">let's started</h2>
+      <div class="col-12 p-5">
+        <h2 class="poppins-semibold mb-5">let's started</h2>
       </div>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -155,9 +188,9 @@
         <h2 class="poppins-semibold">Success Stories</h2>
       </div>
     </div>
-    <div class="row p-5">
+    <div class="row">
       <div class="col-sm-12 col-lg-6 offset-lg-3">
-        <div id="carouselExampleDark" class="carousel carousel-light slide" style="max-width: 100%; max-height: 500px; overflow: hidden;">
+        <div id="carouselExampleDark" class="carousel carousel-light slide shadow" style="max-width: 100%; max-height: 500px; overflow: hidden;">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -165,27 +198,38 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735314920/success-1_wudvhh.jpg" class="img-fluid" alt="..."
-                srcset="https://res.cloudinary.com/dholbtxkp/image/upload/v1735314920/success-1_wudvhh.jpg 768w, https://res.cloudinary.com/dholbtxkp/image/upload/v1735314920/success-1_wudvhh.jpg 1024w"
-                sizes="(max-width: 768px) 100vw, 768px" style="max-height: 500px; object-fit: cover; width: 100%;">
+              <img 
+                src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339154/carrosel-1-1024_cbhwlu.png" 
+                class="img-fluid" alt="..."
+                srcset="
+                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339154/carrosel-1-1024_cbhwlu.png 1024w, 
+                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735338892/carrosel-1920_fdihzu.png 1920w"
+                sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style="max-height: 500px; object-fit: cover; width: 100%;">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="poppins-medium">Transforming My Workout Routine</h5>
                 <p>"Active Tracker helped me design a personalized workout plan that fits my fitness goals perfectly. By tracking my progress and adjusting my routines, I’ve seen significant improvements in my strength and endurance. It’s motivating to see my growth every week!"</p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735314925/success-2_tuvqlt.jpg" class="img-fluid" alt="..."
-                srcset="https://res.cloudinary.com/dholbtxkp/image/upload/v1735314925/success-2_tuvqlt.jpg 768w, https://res.cloudinary.com/dholbtxkp/image/upload/v1735314925/success-2_tuvqlt.jpg 1024w"
-                sizes="(max-width: 768px) 100vw, 768px" style="max-height: 500px; object-fit: cover; width: 100%;">
+              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339466/carrosel-2-1024_nojijo.png" class="img-fluid" alt="..."
+                srcset="
+                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339466/carrosel-2-1024_nojijo.png 1024w,
+                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339462/carrosel-2-1920_f55ueb.png 1920w"
+                  sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style="max-height: 500px; object-fit: cover; width: 100%;">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="poppins-medium">Achieving New Fitness Milestones</h5>
-                <p>"Thanks to Active Tracker, I’ve been able to consistently push myself further. The system keeps me on track, ensuring I stay focused on my goals. From increasing weights to improving my cardio performance, Active Tracker has been a key part of my fitness journey!"</p>
+                <p>"Thanks to Active Tracker, Ive been able to consistently push myself further. The system keeps me on track, ensuring I stay focused on my goals. From increasing weights to improving my cardio performance, Active Tracker has been a key part of my fitness journey!"</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735314942/success-3_lkn6f8.jpg" class="img-fluid" alt="..."
-                srcset="https://res.cloudinary.com/dholbtxkp/image/upload/v1735314942/success-3_lkn6f8.jpg 768w, https://res.cloudinary.com/dholbtxkp/image/upload/v1735314942/success-3_lkn6f8.jpg 1024w"
-                sizes="(max-width: 768px) 100vw, 768px" style="max-height: 500px; object-fit: cover; width: 100%;">
+              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339609/carrosel-3-1024_beypvi.png" class="img-fluid" alt="..."
+                srcset="
+                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339609/carrosel-3-1024_beypvi.png 768w,
+                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339585/carrosel-3-1920_pdd9l8.png 1920"
+                  sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style="max-height: 500px; object-fit: cover; width: 100%;">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="poppins-medium">A Game-Changer for Consistency</h5>
                 <p>"Before using Active Tracker, I struggled to stay consistent with my workouts. Now, the platform helps me stay organized with clear routines and progress tracking. I’m finally seeing the results I’ve always wanted. It’s easy to use and makes fitness fun again!"</p>
@@ -204,7 +248,7 @@
       </div>
     </div>
   </article>
-  <footer class="container-fluid text-center bg-body-tertiary">
+  <footer class="container-fluid text-center mt-4 bg-body-tertiary">
     <div class="row d-flex align-items-center justify-content-center">
       <div class="col-12 p-4">
         <h2 class="poppins-medium success">Active Tracker</h2>
@@ -223,5 +267,6 @@
     </div>
   </footer>
   <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/resources/scripts/login.js"></script>
 </body>
 </html>
