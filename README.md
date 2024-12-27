@@ -6,7 +6,7 @@ O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backen
 
 ## Endereço de Deploy - GitHub Pages
 
-https://utfpr-gp.github.io/roubank-css/
+https://allancordova.github.io/active-tracker/prod/telas/index.html
 
 ## Protótipo
 
