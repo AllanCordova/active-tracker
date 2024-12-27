@@ -47,6 +47,10 @@
     color: var(--bs-secondary)
 }
 
+.bi-clipboard {
+    color: var(--bs-success);
+}
+
 .card-img-top {
     max-height: 300px;
     object-fit: cover;
@@ -65,8 +69,13 @@
 }
 
 .section-msg  {
+    padding: 10px;
     border: solid rgb(173, 163, 163) 1.5px;
     border-radius: 5px;
+}
+
+.success {
+    color: var(--bs-success);
 }
 
 /* mobile */
