@@ -69,7 +69,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="loginForm" class="d-flex flex-column justify-content-center align-items-start w-100" onsubmit="login(event)">
+            <form id="loginForm" class="d-flex flex-column justify-content-center align-items-start w-100">
               <label class="poppins-light" for="email">Email</label>
               <div class="input-box w-100 p-2">
                 <input class="form-control" type="email" placeholder="name@example.com" id="email" required>
@@ -79,12 +79,12 @@
                 <input class="form-control" type="password" placeholder="password" id="password" required>
               </div>
               <div class="p-2 w-100 d-flex justify-content-center align-items-center">
-                <button type="submit" data-bs-dismiss="modal" class="btn btn-success text-center w-75">Fazer login</button>
+                <button id="envio" type="submit" class="btn btn-success text-center w-75">Fazer login</button>
               </div>
             </form>            
           </div>
           <div class="modal-footer d-flex justify-content-center align-items-center">
-            <div id="loginMessage" class="text-danger mt-2" style="display: none;">Erro ao fazer login. Tente novamente.</div>
+            <div id="loginMessage" class="text-danger mt-2" style="display: none;">Senha errada. Tente novamente.</div>
           </div>
         </div>
       </div>
