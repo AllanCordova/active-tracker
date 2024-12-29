@@ -76,8 +76,10 @@ function trainings(input,msgTraining) {
     // adicionando icone no botão
     btn.appendChild(btnContent);
     
-    // zerando campo input
+    // zerando campo input e placeholder
     input.value = '';
+    input.classList.remove('placeholder-changed');
+    input.placeholder = 'my ex: training for arms';
 
     area.appendChild(item);
     item.appendChild(btn);
