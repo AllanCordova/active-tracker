@@ -94,25 +94,23 @@
     <main class="container text-center">
         <div class="row">
             <div class="col-sm-12 col-lg-6 offset-lg-3 p-5">
-                <form id="loginForm" class="d-flex flex-column justify-content-center align-items-center border"> 
+                <form id="loginForm" class="d-flex flex-column justify-content-center align-items-center border rounded"> 
                     <div class="p-4">
                         <h2 class="poppins-semibold success mb-0">trainings</h2>
                     </div>
-                    <div id="trainings" class="input-group p-3 d-flex flex-column justify-content-center align-items-center">
+                    <ul id="trainings" class="p-3 g-3 d-flex flex-column justify-content-center align-items-center list-group rounded w-75">
+
+                    </ul>
+                    <div id="trainingsMake" class="input-group p-3 d-flex flex-column justify-content-center align-items-center">
 
                     </div>
                     <div class="p-2 d-flex flex-column align-items-center">
                         <div class="p-2">
-                            <span id="none-training" class="poppins-light" style="opacity: 0.6;">sua lista de treinos está vazia começe a criar!</span>
+                            <span id="none-training" class="poppins-light" style="opacity: 0.9;">Your workout list is empty, start creating!</span>
                         </div>
                         <div class="p-2">
-                            <button type="submit" onclick="makeTraining(event)" class="btn btn-success"><i class="bi bi-plus fs-4 mb-0"></i></button>
+                            <button id="makeInput" type="submit" onclick="makeTraining(event)" class="btn btn-success"><i class="bi bi-plus fs-4 mb-0"></i></button>
                         </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <span id="msg-error" class="alert alert-danger poppins-light" style="display: none; color: red;">save the previous workout to create a new one</span>
-                      </div>
                     </div>
                 </form>       
             </div>

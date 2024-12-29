@@ -15,11 +15,28 @@
     background-color: #198754;
 }
 
+.list-group-item {
+    background-color: #198754;
+}
+
 /* minhas classes */
 
 .days-check {
     border: none;
     background-color: white;
+}
+
+.my-btn {
+    border: none;
+    background-color: #198754;
+}
+
+.plus-icon {
+    color: white;
+}
+
+.plus-icon:hover {
+    color: rgb(180, 171, 171);
 }
 
 /* Para elementos com a classe "show" */
@@ -35,4 +52,8 @@
 
 .placeholder-changed::placeholder {
     color: red;
+}
+
+.opacity {
+    color: rgba(0, 0, 0, 0.363);
 }

@@ -1,22 +1,17 @@
-let isInputCreated = false;
-let erro = document.getElementById('msg-error');
-
 function makeTraining(event) {
     event.preventDefault();
 
-    // validando campos input
-    if (isInputCreated) {
-        erro.style.display = 'block';
-        return;
-    }
-
-    const area = document.getElementById('trainings');
+    // finalizando abertura dos inputs
+    const makeInput = document.getElementById('makeInput');
+    makeInput.style.display = 'none';
+    
+    const area = document.getElementById('trainingsMake');
 
     // criando campo input
     let input = document.createElement('input');
     input.type = 'text';
-    input.placeholder = 'name';
-    input.classList.add('form-control', 'w-100', 'poppins-light', 'transition');
+    input.placeholder = 'my ex: training for arms';
+    input.classList.add('form-control', 'w-100', 'poppins-light', 'transition', 'opacity');
     input.style.borderRadius = '4px';
 
     // criando espaçamento
@@ -35,16 +30,13 @@ function makeTraining(event) {
     area.appendChild(div);
     area.appendChild(btn);
     
-    isInputCreated = true;
-
-    // removendo msg de criar novo treino
-    const trainingMsg = document.getElementById('none-training');
-    trainingMsg.style.display = 'none';
-
     // reniciando transição
     requestAnimationFrame(() => {
         input.classList.add("show");
     });
+
+    let msgTraining = document.getElementById('none-training');
+    msgTraining.textContent = 'give your workout a name'
 
     // adicionando treino criado
     btn.addEventListener('click', function(event) {
@@ -56,7 +48,47 @@ function makeTraining(event) {
             return
         }
 
-        erro.style.display = 'none';
-        isInputCreated = false;
+        trainings(input,msgTraining);
     })
 }
+
+function trainings(input,msgTraining) {
+    const area = document.getElementById('trainings');
+
+    // adicionando treino a tela
+    let item = document.createElement('li');
+    item.innerHTML = input.value;
+    item.classList.add('list-group-item', 'rounded','w-100', 'poppins-light', 'text-light', 'd-flex', 'align-items-center', 'justify-content-between', 'transition');
+
+    // criando botão
+    let btn = document.createElement('button');
+    btn.classList.add('my-btn');
+    btn.type = 'button';
+
+    // criando icone
+    let btnContent = document.createElement('i');
+    btnContent.classList.add('bi', 'bi-plus', 'fs-1', 'mb-0', 'plus-icon');
+
+    // criando espaçamento entre treinos
+    let space = document.createElement('div');
+    space.classList.add('p-1')
+
+    // adicionando icone no botão
+    btn.appendChild(btnContent);
+    
+    // zerando campo input
+    input.value = '';
+
+    area.appendChild(item);
+    item.appendChild(btn);
+    area.appendChild(space);
+
+    msgTraining.textContent = 'Add exercises to your workout!'
+
+    // animação
+    requestAnimationFrame(() => {
+        item.classList.add("show");
+    });
+
+
+} 

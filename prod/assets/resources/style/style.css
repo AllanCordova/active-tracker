@@ -78,6 +78,10 @@
     color: var(--bs-success);
 }
 
+.successDark {
+    color: var(--bs-secondary);
+}
+
 .modal-login {
     border: none;
     background-color: rgb(252, 249, 246);
