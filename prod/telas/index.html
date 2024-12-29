@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="build.html">Build training</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -53,6 +53,15 @@
       <div class="nav-title">
         <h2 class="poppins-bold mb-0">Active Tracker</h2>
       </div>
+      <div class="nav-item">
+        <a class="nav-link success poppins-light" href="build.html">Build</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link success poppins-light" href="#">Record</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link success poppins-light" href="#">Consult</a>
+      </div>
       <div class="nav-icon">
         <button class="modal-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="bi bi-person-fill fs-3"></i>
@@ -65,11 +74,15 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title text-center fs-5 poppins-semibold" id="exampleModalLabel">Login</h1>
+            <h1 class="modal-title text-center success fs-5 poppins-semibold" id="modalTitle">Login</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id="modalBody">
             <form id="loginForm" class="d-flex flex-column justify-content-center align-items-start w-100">
+              <label class="poppins-light" for="name">Name</label>
+              <div class="input-box w-100 p-2">
+                <input class="form-control poppins-light" type="text" placeholder="name@Allan.example" id="name" required>
+              </div>
               <label class="poppins-light" for="email">Email</label>
               <div class="input-box w-100 p-2">
                 <input class="form-control poppins-light" type="email" placeholder="name@example.com" id="email" required>
