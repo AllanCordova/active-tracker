@@ -91,6 +91,4 @@ function trainings(input,msgTraining) {
     requestAnimationFrame(() => {
         item.classList.add("show");
     });
-
-
 } 
