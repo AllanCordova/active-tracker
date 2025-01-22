@@ -83,6 +83,10 @@
     color: var(--bs-success);
 }
 
+.bg-successDark {
+    background-color: var(--bs-secondary);
+}
+
 .successDark {
     color: var(--bs-secondary);
 }
@@ -166,6 +170,7 @@
         font-family: "Poppins", serif;
         font-weight: 500;
         font-style: normal;
+        font-size: var(--med);
     }
 
     .poppins-semibold {

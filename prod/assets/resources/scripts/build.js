@@ -1,94 +1,63 @@
-function makeTraining(event) {
+document.getElementById('formTrainings').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // finalizando abertura dos inputs
-    const makeInput = document.getElementById('makeInput');
-    makeInput.style.display = 'none';
-    
-    const area = document.getElementById('trainingsMake');
+    let nomeTraining = document.getElementById('nameTraining').value;
 
-    // criando campo input
-    let input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'my ex: training for arms';
-    input.classList.add('form-control', 'w-100', 'poppins-light', 'transition', 'opacity');
-    input.style.borderRadius = '4px';
+    if (nomeTraining.trim() === '' || nomeTraining == null) {
+        return false;
+    }
 
-    // criando espaçamento
-    let div = document.createElement('div');
-    div.classList.add('p-2')
+    const trainingData = {
+        id: makeKey(),
+        name: nomeTraining
+    };
 
-    // criando campo para salvar
-    let btn = document.createElement('button');
-    btn.type = 'submit'
-    btn.innerHTML = 'save';
-    btn.classList.add('btn', 'btn-success', 'w-50', 'poppins-light');
-    btn.style.borderRadius = '4px';
+    renderTraining(trainingData);
+    saveTraining(trainingData);
 
-    // adicionando no dom
-    area.appendChild(input);
-    area.appendChild(div);
-    area.appendChild(btn);
-    
-    // reniciando transição
-    requestAnimationFrame(() => {
-        input.classList.add("show");
-    });
+    document.getElementById('nameTraining').value = '';
+});
 
-    let msgTraining = document.getElementById('none-training');
-    msgTraining.textContent = 'give your workout a name'
-
-    // adicionando treino criado
-    btn.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        if (!(input.value.trim())) {
-            input.placeholder = 'your workout needs a name';
-            input.classList.add('placeholder-changed');
-            return
-        }
-
-        trainings(input,msgTraining);
-    })
+function makeKey() {
+    return Date.now();
 }
 
-function trainings(input,msgTraining) {
-    const area = document.getElementById('trainings');
+function saveTraining(training) {
+    let trainings = JSON.parse(localStorage.getItem('trainings')) || [];
+    trainings.push(training);
+    localStorage.setItem('trainings', JSON.stringify(trainings));
+}
 
-    // adicionando treino a tela
-    let item = document.createElement('li');
-    item.innerHTML = input.value;
-    item.classList.add('list-group-item', 'rounded','w-100', 'poppins-light', 'text-light', 'd-flex', 'align-items-center', 'justify-content-between', 'transition');
+function renderTraining(training) {
+    let trainingElement = document.createElement('a');
+    let button = document.createElement('a');
+    let icon = document.createElement('i');
 
-    // criando botão
-    let btn = document.createElement('button');
-    btn.classList.add('my-btn');
-    btn.type = 'button';
+    const container = document.createElement('div');
 
-    // criando icone
-    let btnContent = document.createElement('i');
-    btnContent.classList.add('bi', 'bi-plus', 'fs-1', 'mb-0', 'plus-icon');
+    trainingElement.textContent = training.name;
+    trainingElement.classList.add('training', 'poppins-medium', 'text-light');
+    trainingElement.href = 'exercise.html';
 
-    // criando espaçamento entre treinos
-    let space = document.createElement('div');
-    space.classList.add('p-1')
+    icon.classList.add('bi', 'bi-plus-square');
+    button.appendChild(icon);
+    button.classList.add('btn', 'fs-2', 'text-white');
+    button.href = 'exercise.html';
 
-    // adicionando icone no botão
-    btn.appendChild(btnContent);
-    
-    // zerando campo input e placeholder
-    input.value = '';
-    input.classList.remove('placeholder-changed');
-    input.placeholder = 'my ex: training for arms';
+    container.classList.add('d-flex', 'justify-content-around', 'align-items-center', 'border', 'rounded', 'w-100');
+    container.dataset.id = training.id;
 
-    area.appendChild(item);
-    item.appendChild(btn);
-    area.appendChild(space);
+    container.appendChild(trainingElement);
+    container.appendChild(button);
 
-    msgTraining.textContent = 'Add exercises to your workout!'
+    const trainings = document.getElementById('meWorkouts');
+    trainings.appendChild(container);
+}
 
-    // animação
-    requestAnimationFrame(() => {
-        item.classList.add("show");
-    });
-} 
+function renderSavedTrainings() {
+    const savedTrainings = JSON.parse(localStorage.getItem('trainings')) || [];
+    savedTrainings.forEach(training => renderTraining(training));
+}
+
+// Renderizar os treinos salvos ao carregar a página
+document.addEventListener('DOMContentLoaded', renderSavedTrainings);

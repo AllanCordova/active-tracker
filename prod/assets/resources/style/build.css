@@ -9,51 +9,14 @@
     --xx-large: 3rem;
 }
 
-/* classes bootstrap */
-
-.btn-success:hover {
-    background-color: #198754;
-}
-
-.list-group-item {
-    background-color: #198754;
-}
-
 /* minhas classes */
 
-.days-check {
-    border: none;
-    background-color: white;
+.training {
+    text-decoration: none;
+    color: black;
 }
 
-.my-btn {
-    border: none;
-    background-color: #198754;
-}
-
-.plus-icon {
-    color: white;
-}
-
-.plus-icon:hover {
-    color: rgb(180, 171, 171);
-}
-
-/* Para elementos com a classe "show" */
-.transition.show {
-    opacity: 1; /* Aparece com uma transição suave */
-}
-
-/* Inicialmente, a opacidade será 0 (invisível) */
-.transition {
-    opacity: 0;
-    transition: opacity 0.9s ease;
-}
-
-.placeholder-changed::placeholder {
-    color: red;
-}
-
-.opacity {
-    color: rgba(0, 0, 0, 0.363);
+/* icones */
+.bi:hover {
+    color: var(--bs-success);
 }
