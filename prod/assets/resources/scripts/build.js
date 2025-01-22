@@ -44,7 +44,16 @@ function renderTraining(training) {
     button.classList.add('btn', 'fs-2', 'text-white');
     button.href = 'exercise.html';
 
-    container.classList.add('d-flex', 'justify-content-around', 'align-items-center', 'border', 'rounded', 'w-100');
+    container.classList.add(
+        'd-flex',
+        'justify-content-around',
+        'align-items-center',
+        'border',
+        'p-3',
+        'rounded',
+        'w-100',
+        'training-container' // Classe com transição inicial
+    );
     container.dataset.id = training.id;
 
     container.appendChild(trainingElement);
@@ -52,7 +61,13 @@ function renderTraining(training) {
 
     const trainings = document.getElementById('meWorkouts');
     trainings.appendChild(container);
+
+    // Adiciona a classe visível após uma pequena espera
+    setTimeout(() => {
+        container.classList.add('visible');
+    }, 100); // Pequeno delay para permitir que a transição seja renderizada
 }
+
 
 function renderSavedTrainings() {
     const savedTrainings = JSON.parse(localStorage.getItem('trainings')) || [];
