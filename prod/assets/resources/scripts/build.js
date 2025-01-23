@@ -66,6 +66,14 @@ function renderTraining(training) {
     setTimeout(() => {
         container.classList.add('visible');
     }, 100); // Pequeno delay para permitir que a transição seja renderizada
+
+    trainingElement.addEventListener('click', () => {
+        localStorage.setItem('selectedTraining', training.name); // Salva o nome do treino
+    });
+
+    button.addEventListener('click', () => {
+        localStorage.setItem('selectedTraining', training.name);
+    });
 }
 
 
