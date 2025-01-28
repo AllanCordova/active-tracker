@@ -37,7 +37,7 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
             <li class="nav-item">
-              <button onclick="isLogin()" type="button" class="btn btn-secondary text-black" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+              <a class="btn btn-secondary text-black" href="login.html">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -53,55 +53,19 @@
       <div class="nav-title">
         <h2 class="poppins-bold mb-0">Active Tracker</h2>
       </div>
-      <div class="nav-item">
-        <a class="nav-link success poppins-light" href="build.html">Build</a>
-      </div>
-      <div class="nav-item">
-        <a class="nav-link success poppins-light" href="#">Record</a>
-      </div>
-      <div class="nav-item">
-        <a class="nav-link success poppins-light" href="#">Consult</a>
-      </div>
-      <div class="nav-icon">
-        <button onclick="isLogin()" class="modal-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <i class="bi bi-person-fill fs-3"></i>
-        </button>
-      </div>
-    </nav>
-
-    <!-- modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title text-center success fs-5 poppins-semibold" id="modalTitle">Login</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="modalBody">
-            <form id="loginForm" class="d-flex flex-column justify-content-center align-items-start w-100">
-              <label class="poppins-light" for="name">Name</label>
-              <div class="input-box w-100 p-2">
-                <input class="form-control poppins-light" type="text" placeholder="name@Allan.example" id="name" required>
-              </div>
-              <label class="poppins-light" for="email">Email</label>
-              <div class="input-box w-100 p-2">
-                <input class="form-control poppins-light" type="email" placeholder="name@example.com" id="email" required>
-              </div>
-              <label class="poppins-light" for="password">Senha</label>
-              <div class="input-box w-100 p-2">
-                <input class="form-control poppins-light" type="password" placeholder="password" id="password" required>
-              </div>
-              <div class="p-2 w-100 d-flex justify-content-center align-items-center">
-                <button id="envio" type="submit" class="btn btn-success poppins-light text-center w-75">Fazer login</button>
-              </div>
-            </form>            
-          </div>
-          <div class="modal-footer d-flex justify-content-center align-items-center">
-            <div id="loginMessage" class="text-danger poppins-light mt-2" style="display: none;">Senha errada. Tente novamente.</div>
-          </div>
+      <div class="d-flex gap-4">
+        <div class="nav-icon">
+          <a href="login.html">
+            <i class="bi bi-person-fill fs-2"></i>
+          </a>
+        </div>
+        <div class="nav-icon">
+          <a href="index.html">
+            <i class="bi bi-house fs-2"></i>
+          </a>
         </div>
       </div>
-    </div>
+    </nav>
 
   </header>
   <section class="container text-center">
@@ -115,7 +79,7 @@
           <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737390965/pexels-shvetsa-5068920_fide36.jpg" class="img-fluid shadow">
         </div>
         <div class="p-4">
-          <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+          <a href="login.html" class="btn btn-success w-100">Login</a>
         </div>
       </div>
     </div>
@@ -131,7 +95,7 @@
           </div>
         </div>
         <div class="p-3">
-          <butto onclick="isLogin()" type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>    
+          <a href="login.html" class="btn btn-success w-100">Login</a>  
         </div>
       </div>
     </div>

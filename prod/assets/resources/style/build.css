@@ -30,6 +30,14 @@
   
 
 /* icones */
-.bi:hover {
+.bi-plus-square:hover {
     color: var(--bs-success);
+}
+
+.text-red {
+    color: aliceblue;
+}
+
+.text-red:hover {
+    color: var(--bs-red);
 }

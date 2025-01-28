@@ -3,6 +3,7 @@
 :root {
     --bs-success: #2ECC71;
     --bs-secondary: #198754; /* Nova cor para o tema secundário */
+    --bs-red: rgb(199, 29, 29);
     --smal: 1rem;
     --med: 1.4rem;
     --large: 2rem;
@@ -43,7 +44,7 @@
     background-color: #2ECC71;
 }
 
-.bi-person-fill {
+.bi-person-fill, .bi-house {
     color: var(--bs-secondary)
 }
 

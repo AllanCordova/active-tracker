@@ -19,7 +19,7 @@ async function fetchExercisesByBodyPart(bodyPart) {
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': 'a337c073b5mshbe033a6687f989ap1e31d9jsn14e66b6078c6', // Sua chave da API
+            'x-rapidapi-key': 'a337c073b5mshbe033a6687f989ap1e31d9jsn14e66b6078c6',
             'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
         },
     };
@@ -98,7 +98,7 @@ function showSuccessMessage(message) {
     // Cria o elemento da mensagem
     const messageContainer = document.createElement('div');
     messageContainer.className = 'alert alert-success alert-dismissible fade show position-fixed top-50 start-50 translate-middle';
-    messageContainer.style.zIndex = '1050'; // Garante que a mensagem fique sobreposta
+    messageContainer.style.zIndex = '1050';
     messageContainer.role = 'alert';
     messageContainer.textContent = message;
 

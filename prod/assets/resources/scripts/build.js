@@ -30,8 +30,10 @@ function saveTraining(training) {
 
 function renderTraining(training) {
     let trainingElement = document.createElement('a');
-    let button = document.createElement('a');
-    let icon = document.createElement('i');
+    let buttonAdd = document.createElement('a');
+    let buttonDel = document.createElement('button');
+    let iconPlus = document.createElement('i');
+    let iconTrash = document.createElement('i');
 
     const container = document.createElement('div');
 
@@ -39,10 +41,14 @@ function renderTraining(training) {
     trainingElement.classList.add('training', 'poppins-medium', 'text-light');
     trainingElement.href = 'exercise.html';
 
-    icon.classList.add('bi', 'bi-plus-square');
-    button.appendChild(icon);
-    button.classList.add('btn', 'fs-2', 'text-white');
-    button.href = 'exercise.html';
+    iconPlus.classList.add('bi', 'bi-plus-square');
+    buttonAdd.appendChild(iconPlus);
+    buttonAdd.classList.add('btn', 'fs-3', 'text-white');
+    buttonAdd.href = 'exercise.html';
+
+    iconTrash.classList.add('bi', 'bi-trash');
+    buttonDel.appendChild(iconTrash);
+    buttonDel.classList.add('btn', 'fs-3', 'text-red');
 
     container.classList.add(
         'd-flex',
@@ -52,30 +58,49 @@ function renderTraining(training) {
         'p-3',
         'rounded',
         'w-100',
-        'training-container' // Classe com transição inicial
+        'training-container'
     );
     container.dataset.id = training.id;
 
+    container.appendChild(buttonDel);
     container.appendChild(trainingElement);
-    container.appendChild(button);
+    container.appendChild(buttonAdd);
 
     const trainings = document.getElementById('meWorkouts');
     trainings.appendChild(container);
 
-    // Adiciona a classe visível após uma pequena espera
+    // Adiciona uma animação de visibilidade com transição
     setTimeout(() => {
         container.classList.add('visible');
-    }, 100); // Pequeno delay para permitir que a transição seja renderizada
+    }, 100);
 
+    // Salva o treino selecionado ao clicar
     trainingElement.addEventListener('click', () => {
-        localStorage.setItem('selectedTraining', training.name); // Salva o nome do treino
+        localStorage.setItem('selectedTraining', training.name);
     });
 
-    button.addEventListener('click', () => {
+    buttonAdd.addEventListener('click', () => {
         localStorage.setItem('selectedTraining', training.name);
+    });
+
+    // Remove o treino ao clicar no botão de exclusão
+    buttonDel.addEventListener('click', () => {
+        removeTraining(training.id, container);
     });
 }
 
+function removeTraining(trainingId, container) {
+    // Remove o elemento do DOM
+    container.classList.remove('visible'); // Adiciona uma transição de saída
+    container.addEventListener('transitionend', () => {
+        container.remove();
+    });
+
+    // Remove o treino do localStorage
+    let trainings = JSON.parse(localStorage.getItem('trainings')) || [];
+    trainings = trainings.filter(t => t.id !== trainingId); // Filtra o treino a ser removido
+    localStorage.setItem('trainings', JSON.stringify(trainings));
+}
 
 function renderSavedTrainings() {
     const savedTrainings = JSON.parse(localStorage.getItem('trainings')) || [];
