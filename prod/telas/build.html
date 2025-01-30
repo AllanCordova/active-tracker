@@ -23,6 +23,7 @@
     <!-- link para arquivo style.css -->
     <link rel="stylesheet" href="../assets/resources/style/style.css" />
     <link rel="stylesheet" href="../assets/resources/style/build.css" />
+    <link rel="stylesheet" href="../assets/resources/style/excercise.css" />
     <!-- fontes para o projeto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,12 +37,22 @@
     <header>
       <!-- Menu para celular -->
       <nav class="d-lg-none d-md-flex navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between"
+        >
           <!-- Centraliza o título verticalmente -->
           <div class="nav-title">
             <h1 class="poppins-bold mb-0">Active Tracker</h1>
           </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -53,7 +64,9 @@
                 <a class="nav-link" href="#">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-secondary text-black" href="login.html">Login</a>
+                <a class="btn btn-secondary text-black" href="login.html"
+                  >Login</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -62,10 +75,11 @@
           </div>
         </div>
       </nav>
-      
-  
+
       <!-- Menu para desktop -->
-      <nav class="d-none d-lg-flex p-2 justify-content-around align-items-center bg-light">
+      <nav
+        class="d-none d-lg-flex p-2 justify-content-around align-items-center bg-light"
+      >
         <div class="nav-title">
           <h2 class="poppins-bold mb-0">Active Tracker</h2>
         </div>
@@ -82,28 +96,44 @@
           </div>
         </div>
       </nav>
-  
     </header>
     <main class="container text-center">
       <div class="row mt-5">
         <div class="col-sm-12 col-lg-6 offset-lg-3">
-          <h2 class="poppins-semibold">
-            build your workout
-          </h2>
+          <h2 class="poppins-semibold">build your workout</h2>
           <form id="formTrainings" class="mt-5">
-            <input id="nameTraining" type="text" class="form-control" placeholder="Back and Arms">
-            <button type="submit" class="btn btn-success w-100 mt-3">Save</button>
+            <input
+              id="nameTraining"
+              type="text"
+              class="form-control"
+              placeholder="Back and Arms"
+            />
+            <button type="submit" class="btn btn-success w-100 mt-3">
+              Save
+            </button>
           </form>
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-sm-12 col-lg-6 offset-lg-3 border rounded bg-successDark">
-          <div id="meWorkouts" class="d-flex flex-column justify-content-center align-items-center p-3 gap-3">
-
-          </div>
+        <div
+          class="col-sm-12 col-lg-6 offset-lg-3 border rounded bg-successDark"
+        >
+          <div
+            id="meWorkouts"
+            class="d-flex flex-column justify-content-center align-items-center p-3 gap-3"
+          ></div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-12 col-lg-6 offset-lg-3">
+          <div
+            id="meExcercises"
+            class="d-flex flex-column justify-content-center align-items-center p-3 gap-3"
+          ></div>
         </div>
       </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/resources/scripts/login.js"></script>
     <script src="../assets/resources/scripts/build.js"></script>
