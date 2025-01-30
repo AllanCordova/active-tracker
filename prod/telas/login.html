@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- links do bootstrap -->
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff">
+  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2">
+  <!-- link para arquivo style.css -->
+  <link rel="stylesheet" href="../assets/resources/style/style.css">
+  <link rel="stylesheet" href="../assets/resources/style/login.css">
+  <!-- fontes para o projeto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Active tracker</title>
+</head>
+<body>
+  <header>
+    <!-- Menu para celular -->
+    <nav class="d-lg-none d-md-flex navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Centraliza o título verticalmente -->
+        <div class="nav-title">
+          <h1 class="poppins-bold mb-0">Active Tracker</h1>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Menu para desktop -->
+    <nav class="d-none d-lg-flex p-2 justify-content-around align-items-center bg-light">
+      <div class="nav-title">
+        <h2 class="poppins-bold mb-0">Active Tracker</h2>
+      </div>
+      <div class="d-flex gap-4">
+        <div class="nav-icon">
+          <a href="index.html">
+            <i class="bi bi-house fs-3"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <main class="container text-center">
+    <div class="row mt-5">
+        <div class="col-sm-12 col-lg-6 offset-lg-3">
+            <form id="login" class="d-flex flex-column align-items-center form-menu gap-3">
+                <label for="email" class="form-label poppins-medium">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <span id="emailInvalid" class="poppins-light text-danger"></span>
+                <label for="password" class="form-label poppins-medium">Password</label>
+                <input type="password" id="password" placeholder="password@example1A25s" class="form-control">
+                <span id="passwordInvalid" class="poppins-light text-danger"></span>
+                <button class="btn btn-success w-100">Login</button>
+                <a href="#" class="poppins-light link">Não tem uma conta? fazer cadastro!</a>
+            </form>
+        </div>
+    </div>
+  </main>
+  <footer style="display: none;" class="container-fluid text-center mt-4 bg-body-tertiary">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-12 p-4">
+        <h2 class="poppins-medium success">Active Tracker</h2>
+      </div>
+      <div class="col-12">
+        <i class="bi bi-clipboard fs-3"></i>
+      </div>
+    </div>
+    <div class="row p-2">
+      <div class="col-12 p-2">
+        <span class="poppins-light">© 2024 Active Tracker. All rights reserved. Designed with passion to help you achieve your fitness goals.</span>
+      </div>
+      <div class="col-12 p-1">
+        <span class="poppins-light" style="opacity: 0.4;">"This website is intended for educational purposes only and serves as inspiration for your fitness journey. The images used on this site feature individuals who are not actual clients of the Active Tracker system."</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/resources/scripts/login.js"></script>
+</body>
+</html>
