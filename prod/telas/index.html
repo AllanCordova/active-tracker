@@ -1,235 +1,367 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- links do bootstrap -->
-  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff">
-  <link rel="stylesheet" href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2">
-  <!-- link para arquivo style.css -->
-  <link rel="stylesheet" href="../assets/resources/style/style.css">
-  <!-- fontes para o projeto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Active tracker</title>
-</head>
-<body>
-  <header>
-    <!-- Menu para celular -->
-    <nav class="d-lg-none d-md-flex navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid d-flex align-items-center justify-content-between">
-        <!-- Centraliza o título verticalmente -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links do bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+    />
+    <!-- link para arquivo style.css -->
+    <link rel="stylesheet" href="../assets/resources/style/style.css" />
+    <!-- fontes para o projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Active tracker</title>
+  </head>
+  <body>
+    <header>
+      <!-- Menu para celular -->
+      <nav class="d-lg-none d-md-flex navbar navbar-expand-lg bg-body-tertiary">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between"
+        >
+          <!-- Centraliza o título verticalmente -->
+          <div class="nav-title">
+            <h1 class="poppins-bold mb-0">Active Tracker</h1>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="build.html">Build training</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-secondary text-black" href="login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Menu para desktop -->
+      <nav
+        class="d-none d-lg-flex p-2 justify-content-around align-items-center bg-light"
+      >
         <div class="nav-title">
-          <h1 class="poppins-bold mb-0">Active Tracker</h1>
+          <h2 class="poppins-bold mb-0">Active Tracker</h2>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="build.html">Build training</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-secondary text-black" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    
-
-    <!-- Menu para desktop -->
-    <nav class="d-none d-lg-flex p-2 justify-content-around align-items-center bg-light">
-      <div class="nav-title">
-        <h2 class="poppins-bold mb-0">Active Tracker</h2>
-      </div>
-      <div class="d-flex gap-4">
-        <div class="nav-icon">
-          <a href="login.html">
-            <i class="bi bi-person-fill fs-2"></i>
-          </a>
-        </div>
-        <div class="nav-icon">
-          <a href="index.html">
-            <i class="bi bi-house fs-2"></i>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-  </header>
-  <section class="container text-center">
-    <!-- versão mobile -->
-    <div class="d-lg-none d-md-flex row p-5">
-      <div class="col-12">
-        <h2 class="poppins-semibold">Welcome to Active Tracker</h2>
-      </div>
-      <div class="col-12 p-3">
-        <div class="imagens">
-          <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737390965/pexels-shvetsa-5068920_fide36.jpg" class="img-fluid shadow">
-        </div>
-        <div class="p-4">
-          <a href="login.html" class="btn btn-success w-100">Login</a>
-        </div>
-      </div>
-    </div>
-    <!-- versão desktop -->
-    <div class="d-none d-lg-flex row align-items-center p-5">
-      <div class="col-12 p-3">
-        <h2 class="poppins-semibold">Welcome to Active Tracker</h2>
-      </div>
-      <div class="col-6 offset-lg-3">
-        <div class="p-5">
-          <div class="">
-            <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737390965/pexels-shvetsa-5068920_fide36.jpg" class="img-fluid shadow">
+        <div class="d-flex gap-4">
+          <div class="nav-icon">
+            <a href="login.html">
+              <i class="bi bi-person-fill fs-2"></i>
+            </a>
+          </div>
+          <div class="nav-icon">
+            <a href="index.html">
+              <i class="bi bi-house fs-2"></i>
+            </a>
           </div>
         </div>
-        <div class="p-3">
-          <a href="login.html" class="btn btn-success w-100">Login</a>  
+      </nav>
+    </header>
+    <section class="container text-center">
+      <!-- versão mobile -->
+      <div class="d-lg-none d-md-flex row p-5">
+        <div class="col-12">
+          <h2 class="poppins-semibold">Welcome to Active Tracker</h2>
         </div>
-      </div>
-    </div>
-  </section>
-  <main class="container text-center">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="poppins-semibold mb-5">let's started</h2>
-      </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col">
-        <div class="card shadow h-100">
-          <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737509349/card-one_aydu1o.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title poppins-medium">Build Your Workout</h5>
-            <p class="card-text poppins-light">
-              Easily customize your workout routines. Select exercises, adjust sets, weights, and rest intervals to create the perfect plan for your fitness goals.
-            </p>
-            <a href="build.html" class="btn btn-success mt-auto w-100">Build</a>
+        <div class="col-12 p-3">
+          <div class="imagens">
+            <img
+              src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737390965/pexels-shvetsa-5068920_fide36.jpg"
+              class="img-fluid shadow"
+            />
+          </div>
+          <div class="p-4">
+            <a href="login.html" class="btn btn-success w-100">Login</a>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow h-100">
-          <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737509383/card-two_cjht6f.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title poppins-medium">Track Your Progress</h5>
-            <p class="card-text poppins-light">
-              Stay on top of your fitness journey by logging your sets, reps, weights, and performance. Monitor your improvements and reach your goals effectively.
-            </p>
-            <a href="#" class="btn btn-success mt-auto w-100">Track</a>
-          </div>
+      <!-- versão desktop -->
+      <div class="d-none d-lg-flex row align-items-center p-5">
+        <div class="col-12 p-3">
+          <h2 class="poppins-semibold">Welcome to Active Tracker</h2>
         </div>
-      </div>
-      <div class="col">
-        <div class="card shadow h-100">
-          <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737509531/card-three_bjkzur.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title poppins-medium">Explore Exercises</h5>
-            <p class="card-text poppins-light">
-              Find detailed information about exercises. Learn the right techniques, target muscles, and benefits to optimize your workout sessions.
-            </p>
-            <a href="#" class="btn btn-success mt-auto w-100">Explore</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main> 
-  <article class="container text-center">
-    <div class="row p-5">
-      <div class="col-12">
-        <h2 class="poppins-semibold">Success Stories</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 col-lg-6 offset-lg-3">
-        <div id="carouselExampleDark" class="carousel carousel-light slide shadow" style="max-width: 100%; max-height: 500px; overflow: hidden;">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img 
-                src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339154/carrosel-1-1024_cbhwlu.png" 
-                class="img-fluid" alt="..."
-                srcset="
-                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339154/carrosel-1-1024_cbhwlu.png 1024w, 
-                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735338892/carrosel-1920_fdihzu.png 1920w"
-                sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style="max-height: 500px; object-fit: cover; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="poppins-medium">Transforming My Workout Routine</h5>
-                <p>"Active Tracker helped me design a personalized workout plan that fits my fitness goals perfectly. By tracking my progress and adjusting my routines, I’ve seen significant improvements in my strength and endurance. It’s motivating to see my growth every week!"</p>
-              </div>
+        <div class="col-6 offset-lg-3">
+          <div class="p-5">
+            <div class="">
+              <img
+                src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737390965/pexels-shvetsa-5068920_fide36.jpg"
+                class="img-fluid shadow"
+              />
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339466/carrosel-2-1024_nojijo.png" class="img-fluid" alt="..."
-                srcset="
-                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339466/carrosel-2-1024_nojijo.png 1024w,
-                  https://res.cloudinary.com/dholbtxkp/image/upload/v1735339462/carrosel-2-1920_f55ueb.png 1920w"
+          </div>
+          <div class="p-3">
+            <a href="login.html" class="btn btn-success w-100">Login</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="container text-center">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="poppins-semibold mb-5">let's started</h2>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card shadow h-100">
+            <img
+              src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737509349/card-one_aydu1o.jpg"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title poppins-medium">Build Your Workout</h5>
+              <p class="card-text poppins-light">
+                Easily customize your workout routines. Select exercises, adjust
+                sets, weights, and rest intervals to create the perfect plan for
+                your fitness goals.
+              </p>
+              <a href="build.html" class="btn btn-success mt-auto w-100"
+                >Build</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow h-100">
+            <img
+              src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737509383/card-two_cjht6f.jpg"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title poppins-medium">Track Your Progress</h5>
+              <p class="card-text poppins-light">
+                Stay on top of your fitness journey by logging your sets, reps,
+                weights, and performance. Monitor your improvements and reach
+                your goals effectively.
+              </p>
+              <a href="#" class="btn btn-success mt-auto w-100">Track</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow h-100">
+            <img
+              src="https://res.cloudinary.com/dholbtxkp/image/upload/v1737509531/card-three_bjkzur.jpg"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title poppins-medium">Explore Exercises</h5>
+              <p class="card-text poppins-light">
+                Find detailed information about exercises. Learn the right
+                techniques, target muscles, and benefits to optimize your
+                workout sessions.
+              </p>
+              <a href="#" class="btn btn-success mt-auto w-100">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <article class="container text-center">
+      <div class="row p-5">
+        <div class="col-12">
+          <h2 class="poppins-semibold">Success Stories</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 offset-lg-3">
+          <div
+            id="carouselExampleDark"
+            class="carousel carousel-light slide shadow"
+            style="max-width: 100%; max-height: 500px; overflow: hidden"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img
+                  src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339154/carrosel-1-1024_cbhwlu.png"
+                  class="img-fluid"
+                  alt="..."
+                  srcset="
+                    https://res.cloudinary.com/dholbtxkp/image/upload/v1735339154/carrosel-1-1024_cbhwlu.png 1024w,
+                    https://res.cloudinary.com/dholbtxkp/image/upload/v1735338892/carrosel-1920_fdihzu.png   1920w
+                  "
                   sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style="max-height: 500px; object-fit: cover; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="poppins-medium">Achieving New Fitness Milestones</h5>
-                <p>"Thanks to Active Tracker, Ive been able to consistently push myself further. The system keeps me on track, ensuring I stay focused on my goals. From increasing weights to improving my cardio performance, Active Tracker has been a key part of my fitness journey!"</p>
+                  style="max-height: 500px; object-fit: cover; width: 100%"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="poppins-medium">
+                    Transforming My Workout Routine
+                  </h5>
+                  <p>
+                    "Active Tracker helped me design a personalized workout plan
+                    that fits my fitness goals perfectly. By tracking my
+                    progress and adjusting my routines, I’ve seen significant
+                    improvements in my strength and endurance. It’s motivating
+                    to see my growth every week!"
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <img src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339609/carrosel-3-1024_beypvi.png" class="img-fluid" alt="..."
-                srcset="
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339466/carrosel-2-1024_nojijo.png"
+                  class="img-fluid"
+                  alt="..."
+                  srcset="
+                    https://res.cloudinary.com/dholbtxkp/image/upload/v1735339466/carrosel-2-1024_nojijo.png 1024w,
+                    https://res.cloudinary.com/dholbtxkp/image/upload/v1735339462/carrosel-2-1920_f55ueb.png 1920w
+                  "
+                  sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style="max-height: 500px; object-fit: cover; width: 100%"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="poppins-medium">
+                    Achieving New Fitness Milestones
+                  </h5>
+                  <p>
+                    "Thanks to Active Tracker, Ive been able to consistently
+                    push myself further. The system keeps me on track, ensuring
+                    I stay focused on my goals. From increasing weights to
+                    improving my cardio performance, Active Tracker has been a
+                    key part of my fitness journey!"
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://res.cloudinary.com/dholbtxkp/image/upload/v1735339609/carrosel-3-1024_beypvi.png"
+                  class="img-fluid"
+                  alt="..."
+                  srcset="
                   https://res.cloudinary.com/dholbtxkp/image/upload/v1735339609/carrosel-3-1024_beypvi.png 768w,
                   https://res.cloudinary.com/dholbtxkp/image/upload/v1735339585/carrosel-3-1920_pdd9l8.png 1920"
                   sizes="(max-width: 576px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style="max-height: 500px; object-fit: cover; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="poppins-medium">A Game-Changer for Consistency</h5>
-                <p>"Before using Active Tracker, I struggled to stay consistent with my workouts. Now, the platform helps me stay organized with clear routines and progress tracking. I’m finally seeing the results I’ve always wanted. It’s easy to use and makes fitness fun again!"</p>
+                  style="max-height: 500px; object-fit: cover; width: 100%"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="poppins-medium">A Game-Changer for Consistency</h5>
+                  <p>
+                    "Before using Active Tracker, I struggled to stay consistent
+                    with my workouts. Now, the platform helps me stay organized
+                    with clear routines and progress tracking. I’m finally
+                    seeing the results I’ve always wanted. It’s easy to use and
+                    makes fitness fun again!"
+                  </p>
+                </div>
               </div>
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
-    </div>
-  </article>
-  <footer class="container-fluid text-center mt-4 bg-body-tertiary">
-    <div class="row d-flex align-items-center justify-content-center">
-      <div class="col-12 p-4">
-        <h2 class="poppins-medium success">Active Tracker</h2>
+    </article>
+    <footer class="container-fluid text-center mt-4 bg-body-tertiary">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12 p-4">
+          <h2 class="poppins-medium success">Active Tracker</h2>
+        </div>
+        <div class="col-12">
+          <i class="bi bi-clipboard fs-3"></i>
+        </div>
       </div>
-      <div class="col-12">
-        <i class="bi bi-clipboard fs-3"></i>
+      <div class="row p-2">
+        <div class="col-12 p-2">
+          <span class="poppins-light"
+            >© 2024 Active Tracker. All rights reserved. Designed with passion
+            to help you achieve your fitness goals.</span
+          >
+        </div>
+        <div class="col-12 p-1">
+          <span class="poppins-light" style="opacity: 0.4"
+            >"This website is intended for educational purposes only and serves
+            as inspiration for your fitness journey. The images used on this
+            site feature individuals who are not actual clients of the Active
+            Tracker system."</span
+          >
+        </div>
       </div>
-    </div>
-    <div class="row p-2">
-      <div class="col-12 p-2">
-        <span class="poppins-light">© 2024 Active Tracker. All rights reserved. Designed with passion to help you achieve your fitness goals.</span>
-      </div>
-      <div class="col-12 p-1">
-        <span class="poppins-light" style="opacity: 0.4;">"This website is intended for educational purposes only and serves as inspiration for your fitness journey. The images used on this site feature individuals who are not actual clients of the Active Tracker system."</span>
-      </div>
-    </div>
-  </footer>
-  <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/resources/scripts/login.js"></script>
-</body>
+    </footer>
+    <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/resources/scripts/login.js"></script>
+  </body>
 </html>
