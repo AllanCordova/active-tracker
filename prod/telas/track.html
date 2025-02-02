@@ -22,7 +22,6 @@
     />
     <!-- link para arquivo style.css -->
     <link rel="stylesheet" href="../assets/resources/style/style.css" />
-    <link rel="stylesheet" href="../assets/resources/style/build.css" />
     <link rel="stylesheet" href="../assets/resources/style/excercise.css" />
     <!-- fontes para o projeto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>build your workout</title>
+    <title>track your progress</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header>
@@ -99,19 +98,8 @@
     </header>
     <main class="container text-center flex-grow-1">
       <div class="row mt-5">
-        <div class="col-sm-12 col-lg-6 offset-lg-3">
-          <h2 class="poppins-semibold">build your workout</h2>
-          <form id="formTrainings" class="mt-5">
-            <input
-              id="nameTraining"
-              type="text"
-              class="form-control"
-              placeholder="Back and Arms"
-            />
-            <button type="submit" class="btn btn-success w-100 mt-3">
-              Save
-            </button>
-          </form>
+        <div class="col-12">
+          <h2 id="title" class="poppins-semibold h2"></h2>
         </div>
       </div>
       <div class="row mt-5">
@@ -163,6 +151,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/resources/scripts/build.js"></script>
+    <script src="../assets/resources/scripts/track.js"></script>
   </body>
 </html>

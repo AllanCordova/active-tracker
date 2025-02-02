@@ -32,7 +32,7 @@
     />
     <title>build your workout</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header>
       <!-- Menu para celular -->
       <nav class="d-lg-none d-md-flex navbar navbar-expand-lg bg-body-tertiary">
@@ -96,7 +96,7 @@
         </div>
       </nav>
     </header>
-    <main class="container text-center">
+    <main class="container text-center flex-grow-1">
       <div class="row mt-5">
         <div class="col-12">
           <h2 class="poppins-semibold" id="trainingTitle"></h2>
@@ -130,6 +130,32 @@
         </div>
       </div>
     </main>
+    <footer class="container-fluid text-center mt-4 bg-body-tertiary">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12 p-4">
+          <h2 class="poppins-medium success">Active Tracker</h2>
+        </div>
+        <div class="col-12">
+          <i class="bi bi-clipboard fs-3"></i>
+        </div>
+      </div>
+      <div class="row p-2">
+        <div class="col-12 p-2">
+          <span class="poppins-light"
+            >© 2024 Active Tracker. All rights reserved. Designed with passion
+            to help you achieve your fitness goals.</span
+          >
+        </div>
+        <div class="col-12 p-1">
+          <span class="poppins-light" style="opacity: 0.4"
+            >"This website is intended for educational purposes only and serves
+            as inspiration for your fitness journey. The images used on this
+            site feature individuals who are not actual clients of the Active
+            Tracker system."</span
+          >
+        </div>
+      </div>
+    </footer>
     <script src="../assets/libraries/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/resources/scripts/excercise.js"></script>
   </body>

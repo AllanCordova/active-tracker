@@ -1,61 +1,30 @@
-document
-  .getElementById("formTrainings")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+const savedTrainings = JSON.parse(localStorage.getItem("trainings")) || [];
 
-    let nomeTraining = document.getElementById("nameTraining").value;
-
-    if (nomeTraining.trim() === "" || nomeTraining == null) {
-      return false;
-    }
-
-    const trainingData = {
-      id: makeKey(),
-      name: nomeTraining,
-    };
-
-    renderTraining(trainingData);
-    saveTraining(trainingData);
-
-    document.getElementById("nameTraining").value = "";
-  });
-
-function makeKey() {
-  return Date.now();
+if (!(Array.isArray(savedTrainings) && savedTrainings.length > 0)) {
+  alert("sem treinos");
+} else {
+  let title = document.getElementById("title");
+  title.textContent = "Track your progress";
 }
 
-function saveTraining(training) {
-  let trainings = JSON.parse(localStorage.getItem("trainings")) || [];
-  trainings.push(training);
-  localStorage.setItem("trainings", JSON.stringify(trainings));
+function renderSavedTrainings() {
+  const savedTrainings = JSON.parse(localStorage.getItem("trainings")) || [];
+  savedTrainings.forEach((training) => renderTraining(training));
 }
 
 function renderTraining(training) {
   let trainingElement = document.createElement("button");
-  let buttonAdd = document.createElement("a");
-  let buttonDel = document.createElement("button");
-  let iconPlus = document.createElement("i");
-  let iconTrash = document.createElement("i");
 
   const container = document.createElement("div");
 
   trainingElement.textContent = training.name;
   trainingElement.classList.add(
     "training",
-    "poppins-light",
+    "poppins-medium",
     "text-light",
     "btn",
     "btn-success"
   );
-
-  iconPlus.classList.add("bi", "bi-plus-square");
-  buttonAdd.appendChild(iconPlus);
-  buttonAdd.classList.add("btn", "fs-3", "text-white");
-  buttonAdd.href = "exercise.html";
-
-  iconTrash.classList.add("bi", "bi-trash");
-  buttonDel.appendChild(iconTrash);
-  buttonDel.classList.add("btn", "fs-3", "text-red");
 
   container.classList.add(
     "d-flex",
@@ -69,9 +38,7 @@ function renderTraining(training) {
   );
   container.dataset.id = training.id;
 
-  container.appendChild(buttonDel);
   container.appendChild(trainingElement);
-  container.appendChild(buttonAdd);
 
   const pai = document.getElementById("meWorkoutsPai");
   pai.style.display = "block";
@@ -83,37 +50,9 @@ function renderTraining(training) {
     container.classList.add("visible");
   }, 100);
 
-  // Salva o treino selecionado ao clicar
   trainingElement.addEventListener("click", () => {
     renderExcercise(training.name);
   });
-
-  buttonAdd.addEventListener("click", () => {
-    localStorage.setItem("selectedTraining", training.name);
-  });
-
-  // Remove o treino ao clicar no botão de exclusão
-  buttonDel.addEventListener("click", () => {
-    removeTraining(training.id, container);
-  });
-}
-
-function removeTraining(trainingId, container) {
-  // Remove o elemento do DOM
-  container.classList.remove("visible"); // Adiciona uma transição de saída
-  container.addEventListener("transitionend", () => {
-    container.remove();
-  });
-
-  // Remove o treino do localStorage
-  let trainings = JSON.parse(localStorage.getItem("trainings")) || [];
-  trainings = trainings.filter((t) => t.id !== trainingId); // Filtra o treino a ser removido
-  localStorage.setItem("trainings", JSON.stringify(trainings));
-}
-
-function renderSavedTrainings() {
-  const savedTrainings = JSON.parse(localStorage.getItem("trainings")) || [];
-  savedTrainings.forEach((training) => renderTraining(training));
 }
 
 function renderExcercise(nome) {
@@ -181,8 +120,42 @@ function renderExcercise(nome) {
           let exerciseGif = document.createElement("img");
           exerciseGif.src = exerciseData.gifUrl;
           exerciseGif.alt = exerciseData.name;
-          exerciseGif.classList.add("exercise-gif", "img-thumbnail");
+          exerciseGif.classList.add("exercise-gif", "img-thumbnail", "mb-2");
           exerciseCard.appendChild(exerciseGif);
+
+          // form para marcar peso
+          let weightLabel = document.createElement("label");
+          weightLabel.textContent = "weight/kg";
+          weightLabel.classList.add("poppins-medium");
+
+          let weight = document.createElement("input");
+          weight.type = "number";
+          weight.classList.add("form-control", "mb-2");
+          exerciseCard.appendChild(weightLabel);
+          exerciseCard.appendChild(weight);
+
+          // form para marcar rep
+          let againLabel = document.createElement("label");
+          againLabel.textContent = "rep";
+          againLabel.classList.add("poppins-medium");
+
+          let again = document.createElement("input");
+          again.type = "number";
+          again.classList.add("form-control", "mb-2");
+          exerciseCard.appendChild(againLabel);
+          exerciseCard.appendChild(again);
+
+          // botão para registrar progressos
+          let trackProgress = document.createElement("button");
+          trackProgress.textContent = "register";
+          trackProgress.type = "button";
+          trackProgress.classList.add(
+            "btn",
+            "btn-success",
+            "poppins-light",
+            "w-100"
+          );
+          exerciseCard.appendChild(trackProgress);
 
           // Adiciona o card à lista
           exerciseList.appendChild(exerciseCard);
@@ -219,5 +192,4 @@ function renderExcercise(nome) {
   }
 }
 
-// Renderizar os treinos salvos ao carregar a página
 document.addEventListener("DOMContentLoaded", renderSavedTrainings);
