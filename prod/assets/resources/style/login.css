@@ -1,0 +1,30 @@
+/* variaveis */
+:root {
+    --bs-success: #2ECC71;
+    --bs-secondary: #198754; /* Nova cor para o tema secundário */
+    --bs-red: rgb(199, 29, 29);
+    --smal: 1rem;
+    --med: 1.4rem;
+    --large: 2rem;
+    --xx-large: 3rem;
+}
+
+.form-menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #2ECC71 1px solid;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover  {
+    text-decoration: underline;
+    color: var(--bs-secondary);
+}
