@@ -10,7 +10,7 @@ https://allancordova.github.io/active-tracker/prod/telas/index.html
 
 ## Protótipo
 
-https://www.figma.com/design/eQs9U6fxRRx4kxqXXgyFep/active-tracker?node-id=0-1&t=lv9YMPgvIT6x66Vp-1
+https://www.figma.com/design/eQs9U6fxRRx4kxqXXgyFep/active-tracker?node-id=0-1&t=SWunZcb9SKTldk0X-1
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
